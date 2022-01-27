@@ -1,1 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-grey: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--light-grey);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-width: 1115px;
+    margin: 40px 20px;
+}
+
+.info {
+    margin: 0 auto;
+    max-width: 45%;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.info__title {
+    font-size: 36px;
+}
+
+.info__title span {
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.info__text {
+    margin: 20px 0;
+    color: var(--grayish-blue)
+}
+
+.cards {
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 30px;
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 15px 20px 4px rgba(6, 12, 78, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+}
+
+.card--cyan-border::after {
+    background: var(--cyan);
+}
+
+.card--red-border::after {
+    background: var(--red);
+}
+
+.card--orange-border::after {
+    background: var(--orange);
+}
+
+.card--blue-border::after {
+    background: var(--blue);
+}
+
+.two-cards {
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__description {
+    flex-grow: 1;
+}
+
+.card__icon {
+    align-self: flex-end;
+}
+
+.card__title {
+    font-size: 20px;
+    color: var(--dark-blue)
+}
+
+.card__text {
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--grayish-blue)
+}
