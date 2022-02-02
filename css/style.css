@@ -124,3 +124,51 @@ body {
     line-height: 1.7;
     color: var(--grayish-blue)
 }
+
+@media (max-width: 1024px) {
+    .container {
+        width: 83%;
+        min-width: initial;
+        margin: 40px auto;
+    }
+
+    .info {
+        max-width: initial;
+    }
+
+    .info__text {
+        margin: 10px 0 20px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 450px;
+        margin: 65px auto 40px auto;
+    }
+
+    .two-cards {
+        margin: 30px 0;
+        height: 470px;
+    }
+
+    .card {
+        width: auto;
+        height: 220px;
+        padding: 25px 30px;
+    }
+
+    .card__text {
+        margin: 5px 0;
+    }
+
+    .card__icon {
+        width: 58px;
+    }
+}
+
+@media (max-width: 640px) {
+    .info__title {
+        font-size: 24px;
+    }
+}
